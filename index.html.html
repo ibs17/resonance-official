@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= decive-width, initial-scale=1.0">
+    <title data-key="home-title">RESONANCE - Official Website</title>
+    <link rel="stylesheet" href="style.css(RESONANCE full).css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#home" class="logo" id="logo">
+            <span id="houselogo" src="path-house-logo.png">🗿</span>
+        </a>
+
+        <nav>
+            <a href="#about" class="AboutUs" data-key="About Us">𝘼𝙗𝙤𝙪𝙩 𝙐𝙨</a>
+            <a href="#meet-the-band" class="MeetTHEBand" data-key="Meet the Band">𝙈𝙚𝙚𝙩 𝙏𝙃𝙀 𝘽𝙖𝙣𝙙</a>
+            <a href="#our-muzik" data-key="Our Muzik">𝙊𝙪𝙧 𝙈𝙪𝙕𝙞𝙆</a>
+            <a href="#concerts" data-key="Concerts">𝘾𝙤𝙣𝙘𝙚𝙧𝙩𝙨</a>
+            <a href="#HireUs" data-key="Hire us">𝙃𝙞𝙧𝙚 𝙐𝙨</a>
+
+        </nav>
+
+        <div class="language-switcher">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="ar">العربية</option>
+                <option value="pt">Português</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+                <option value="ko">한국어</option>
+                <option value="no">Norsk</option>
+                <option value="sv">Svenska</option>
+                <option value="fi">Suomi</option>
+                <option value="nl-be">Vlaams</option>
+                <option value="nl">Nederlands</option>
+                <option value="rm">Rumantsch</option>
+                <option value="de-ch">Schwiizerdütsch</option>
+                <option value="ru">Русский</option>
+                <option value="ne">नेपाली</option>
+                <option value="ca">Català</option>
+            </select>
+        </div>
+
+    </header>
+
+    <script>
+        const translations = {
+            en: {
+                About us: "About Us",
+                Meet the Band: "Meet THE Band",
+                Our Muzik: "Our Musik",
+                Concerts: "Concerts",
+                Hire us: "Hire Us",
+                about us h1: "WELCOME TO OUR WORLD"
+                englishText: "𝙒𝙚 𝙖𝙧𝙚 𝙍𝙀𝙎𝙊𝙉𝘼𝙉𝘾𝙀 - 𝙨𝙞𝙭 𝙥𝙖𝙨𝙨𝙞𝙤𝙣𝙖𝙩𝙚 𝙢𝙪𝙨𝙞𝙘𝙞𝙖𝙣𝙨 𝙗𝙡𝙚𝙣𝙙𝙞ng  𝙧𝙤𝙘𝙠, 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙚, 𝙖𝙣𝙙 𝙛𝙪𝙨𝙞𝙤𝙣 𝙨𝙤𝙪𝙣𝙙𝙨.𝘽𝙖𝙨𝙚𝙙 𝙞𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙣𝙚, 𝙎𝙬𝙞𝙩𝙯𝙚𝙧𝙡𝙖𝙣𝙙, 𝙤𝙪𝙧 𝙢𝙪𝙨𝙞𝙘 𝙞𝙨 𝙙𝙧𝙞𝙫𝙚𝙣 𝙗𝙮 𝙧𝙖𝙬 𝙚𝙣𝙚𝙧𝙜𝙮, deep emotion and a strong connection.",
+                sectionheading: "About Us", "Meet", "Our Muzik", "Upcoming Concerts", "Hire Us",
+                orbtitle: "WhO ArE We", "Firts gig" "Rehearsals", "Street Concerts",
+                orbittext: "We started as kids enjoying music in the streets of Lausanne", "We took the stage - and it felt like home. A pack evening to remember", "Sweat, noise, laughs - this is where our sound grows everyday", "Getting paid differently",
+                role: "Drummer", "Bassist, Guitarist", "Pianist, Saxophonist", "Violinist", "Guitarist, Bassist", "Singer, Keyboardist",
+                date: "May 30", "June 12", "June 15", "June 20", "June 21",
+                text: "If you would like to work with us, get in touch!", "Email", "Phone", "Resonance 2025, All rights reserved",
+            },
+
+            es: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Músika", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto ", "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxofonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 de Junio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+            },
+
+            fr: {
+                About us: "À propos",
+                Meet the Band: "Connaissez LE Groupe",
+                Our Muzik: "Nos Campos",
+                Concerts: "Concerts",
+                Hire us: "Embauchez nous",
+                about us h1: "BIENVENUS DANS NOTRE MONDE"
+                englishText: "Nous sommes RESONANCE -  𝙎𝙞𝙭 𝙥𝙖𝙨𝙨𝙞𝙤𝙣𝙣é𝙨 𝙙𝙚 𝙡𝙖 𝙢𝙪𝙨𝙞𝙦𝙪𝙚, 𝙟𝙤𝙪𝙖𝙣𝙩 𝙙𝙪 𝙧𝙤𝙘𝙠, 𝙙𝙚 𝙡'𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙚 𝙚𝙩 𝙛𝙪𝙨𝙞𝙤𝙣𝙖𝙣𝙩 𝙙𝙚𝙨 𝙨𝙩𝙮𝙡𝙚𝙨. 𝘽𝙖𝙨é𝙨 à 𝙇𝙖𝙪𝙨𝙖𝙣𝙣𝙚, 𝙣𝙤𝙩𝙧𝙚 𝙢𝙪𝙨𝙞𝙦𝙪𝙚 𝙚𝙨𝙩 𝙘𝙖𝙧𝙖𝙘𝙩é𝙧𝙞𝙨é𝙚 𝙥𝙖𝙧 𝙨𝙤𝙣 é𝙣𝙚𝙧𝙜𝙞𝙚 𝙥𝙪𝙧𝙚, 𝙨𝙖 𝙥𝙧𝙤𝙛𝙤𝙣𝙙𝙚 é𝙢𝙤𝙩𝙞𝙤𝙣 𝙚𝙩 𝙪𝙣𝙚 𝙛𝙤𝙧𝙩𝙚 𝙘𝙤𝙣𝙣𝙚𝙭𝙞𝙤𝙣.",
+                sectionheading: "À propos de nous", "Connaisez LE Groupe", "Nos Campos", "Prochains Concerts", "Embauchez nous",
+                orbtitle: "QuI SoMmEs NoUs", "Premier concert", "Répètes", "La Rue",
+                orbittext: "Nous avons commencé con des simple enfants profitant de la musique dans les rues de Lausanne", "Nous prenions la scène - et on se sentait presqu'à la maison. Une soirée inoubliable", "Sueur, vacarme y sourires - voici où se développe notre musique jour après jour", "Moyen de paiement alternatif",
+                role: "Batteur", "Bassiste, Guitariste", "Pianiste, Saxofoniste", "Violoniste", "Guitariste, Bassiste", "Chanteur, Clavier",
+                date: "30 mai", "12 juin", "15 juin", "20 juin", "21 juin",
+                text: "Si vous souhaitez travailler avec nous, n'hesitez pas à nous contacter", "Email", "Téléphone", "Resonance 2025, tous les droits reservés",
+
+            },
+
+            de: {
+                About us: "Über uns",
+                Meet the Band: "Treffen Sie die Gruppe ",
+                Our Muzik: "Unsere Muzik",
+                Concerts: "Konzerte",
+                Hire us: "Beauftragen Sie uns",
+                about us h1: "WILLKOMMEN IN UNSERER WELT"
+                englishText: "Wir sind RESONANCE -  Sechs Musikliebhaber, die Rock, Alternative und Fusion spielen. Unsere in Lausanne ansässige Musik zeichnet sich durch pure Energie, tiefe Emotionen und eine starke Verbindung aus.",
+                sectionheading: "Über uns", "Treffen Sie uns", "Unsere Muzik", "Nexte Konzerte", "Beauftragen Sie uns",
+                orbtitle: "WiE SiNd WiR", "Ertste Konzert", "Proben", "Die Strasse",
+                orbittext: "Wir begannen als einfache Kinder, die Musik in den Straßen von Lausanne genossen", "Wir betraten die Bühne – und es fühlte sich wie zu Hause an. Ein unvergesslicher Nachmittag", "Schweiß, Lärm und Lachen – hier wächst unser Sound von Tag zu Tag", "ein etwas anderes Gehalt",
+                role: "Schlagzeuger", "Bassist, Gitarrist", "Pianist, Saxophonist", "Geiger", "Gitarrist, Bassist", "Sänger, Keyboarder",
+                date: "30. Mai", "12.Juni", "15.Juni", "20.Juni", "21.Juni",
+                text: "Wenn Sie mit uns zusammenarbeiten möchten, nehmen Sie bitte Kontakt mit uns auf.", "E-Mail", "Telefon", "Resonance 2025, Alle Rechte vorbehalten",
+
+            },
+
+            it: {
+                About us: "Chi siamo",
+                Meet the Band: "Incontra IL gruppo",
+                Our Muzik: "La nostra musica",
+                Concerts: "Concerti",
+                Hire us: "Assumici",
+                about us h1: "BENVENUTI NEL NOSTRO MONDO",
+                englishText: "Siamo RESONANCE - Siamo sei musicisti appassionati che suonano rock, alternative e fusion. Con sede a Losanna, in Svizzera, la nostra musica è caratterizzata da pura energia, profonda emozione e una forte connessione.",
+                sectionheading: "Chi siamo", "Conosciamoci", "La nostra musica", "Prossimi concerti", "Prenotaci",
+                orbtitle: "Chi siamo", "Primo concerto", "Prove", "La strada",
+                orbittext: "Abbiamo iniziato come semplici ragazzi che si godevano la musica per le strade di Losanna", "Siamo saliti sul palco e ci siamo sentiti a casa. Un pomeriggio indimenticabile", "Sudore, rumore e risate: il nostro sound cresce qui giorno dopo giorno", "Uno stipendio un po' diverso dal solito",
+                role: "Batterista", "Bassista, Chitarrista", "Pianista, Sassofonista", "Violinista", "Chitarrista, Bassista", "Cantante, Tastierista",
+                date: "30 maggio", "12 giugno", "15 giugno", "20 giugno", "21 giugno",
+                text: "Se vuoi lavorare con noi, contattaci", "Email", "Telefono", "Resonance 2025, tutti i diritti riservati",
+
+            },
+
+            ar: {
+                About us: "معلومات عنا",
+                Meet the Band: "تعرف على المجموعة",
+                Our Muzik: "موسيقانا",
+                Concerts: "الحفلات الموسيقية",
+                Hire us: "استأجرنا",
+                about us h1: "مرحبا بكم في عالمنا",
+                englishText: "نحن ريزونانس - ستة موسيقيين شغوفين نعزف موسيقى الروك والبديلة والفيوجن. مقرنا في لوزان، سويسرا، وتتميز موسيقانا بطاقتها النقية، ومشاعرها العميقة، وارتباطها الوثيق.",
+                sectionheading: "نبذة عنا"، "تعرّف علينا"، "موسيقانا"، "الحفلات القادمة"، "احجز معنا",
+                orbtitle: "من نحن"، "الحفل الأول"، "البروفات"، "الشارع",
+                orbittext: "بدأنا كأطفال بسطاء نستمتع بالموسيقى في شوارع لوزان، صعدنا على المسرح، وشعرنا كأننا في بيتنا. ظهيرة لا تُنسى، عرق، وضجيج، وضحك - صوتنا ينمو هنا يومًا بعد يوم، راتب مختلف بعض الشيء."
+                role: "عازف الطبول"، "عازف الجيتار"، "عازف البيانو"، "عازف الساكسفون"، "عازف الكمان"، "عازف الجيتار"، "عازف الجيتار"، "المغني"، "عازف لوحة المفاتيح"،
+                date: "30 مايو"، "12 يونيو"، "15 يونيو"، "20 يونيو"، "21 يونيو",
+                text: "إذا كنت ترغب في العمل معنا، اتصل بنا"، "البريد الإلكتروني"، "الهاتف"، "Resonance 2025، جميع الحقوق محفوظة"،
+
+            },
+
+            pt: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            ja: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            zh: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            ko: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            no: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            sv: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            fi: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            nl- be: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                Concerts: "Conciertos",
+                Hire us: "Contrátanos",
+                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+                englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+            nl: {
+                About us: "Acerca de nosotros",
+            Meet the Band: "Conoce AL Grupo",
+                Our Muzik: "Nuestra Musika",
+                    Concerts: "Conciertos",
+                        Hire us: "Contrátanos",
+                            about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+        englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+            sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                    orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                        role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                            date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+        rm: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                    Our Muzik: "Nuestra Musika",
+                        Concerts: "Conciertos",
+                            Hire us: "Contrátanos",
+                                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+            englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                    orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                        orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                            role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                    text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+        de - ch : {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                    Our Muzik: "Nuestra Musika",
+                        Concerts: "Conciertos",
+                            Hire us: "Contrátanos",
+                                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+            englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                    orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                        orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                            role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                    text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+        ru: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                    Our Muzik: "Nuestra Musika",
+                        Concerts: "Conciertos",
+                            Hire us: "Contrátanos",
+                                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+            englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                    orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                        orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                            role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                    text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+
+            },
+
+        ne: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                    Our Muzik: "Nuestra Musika",
+                        Concerts: "Conciertos",
+                            Hire us: "Contrátanos",
+                                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+            englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                    orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                        orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                            role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                    text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+            },
+
+        ca: {
+                About us: "Acerca de nosotros",
+                Meet the Band: "Conoce AL Grupo",
+                    Our Muzik: "Nuestra Musika",
+                        Concerts: "Conciertos",
+                            Hire us: "Contrátanos",
+                                about us h1: "BIENVENIDOS A NUESTRO MUNDO"
+            englishText: "Somos RESONANCE -  𝙎𝙤𝙢𝙤𝙨 𝙨𝙚𝙞𝙨 𝙢ú𝙨𝙞𝙘𝙤𝙨 𝙖𝙥𝙖𝙨𝙞𝙤𝙣𝙖𝙙𝙤𝙨 𝙦𝙪𝙚 𝙩𝙤𝙘𝙖 𝙧𝙤𝙘𝙠, 𝙨𝙤𝙣𝙞𝙙𝙤𝙨 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙤𝙨 𝙮 𝙛𝙪𝙨𝙞ó𝙣. 𝘾𝙤𝙣 𝙨𝙚𝙙𝙚 𝙚𝙣 𝙇𝙖𝙪𝙨𝙖𝙣𝙖, 𝙎𝙪𝙞𝙯𝙖, 𝙣𝙪𝙚𝙨𝙩𝙧𝙖 𝙢ú𝙨𝙞𝙘𝙖 𝙨𝙚 𝙘𝙖𝙧𝙖𝙘𝙩𝙚𝙧𝙞𝙯𝙖 𝙥𝙤𝙧 𝙨𝙪 𝙚𝙣𝙚𝙧𝙜í𝙖 𝙥𝙪𝙧𝙖, 𝙥𝙧𝙤𝙛𝙪𝙣𝙙𝙖 𝙚𝙢𝙤𝙘𝙞ó𝙣 𝙮 𝙛𝙪𝙚𝙧𝙩𝙚 𝙘𝙤𝙣𝙚𝙭𝙞ó𝙣.",
+                sectionheading: "Acerca de nosotros", "Conoócenos", "Nuestra Musila", "Próximos Conciertos", "Contrátanos",
+                    orbtitle: "QuIeNeS SoMoS", "Primer concierto " "Ensayos", "La Calle",
+                        orbittext: "Empezamos como simples niños disfrutando de la música en las calles de Lausanne", "Tomamos el escenario - y se sentía como en casa. Una tarde inolvidable", "Sudor, fragor, y risas - aquí crece nuestro sonido día a día", "Una paga un tanto diferente",
+                            role: "Batería", "Bajista, Guitarrista", "Pianista, Saxophonista", "Violinista", "Guitarrista, Bajista", "Cantante, Teclista",
+                                date: "30 de Mayo", "12 de Junio", "15 de Junio", "20 de Junio", "21 deJunio",
+                                    text: "Si desean trabajar con nosotros, contáctenos", "Email", "Teléfono", "Resonance 2025, reservados todos los derechos",
+            }
+        }
+
+    </script>
+
+
+
+    <script>
+        const header = document.querySelector("header");
+
+        window.addEventListener("scrol", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+    <script>
+        const sections = document.querySelectorAll(".page-section");
+
+        const options = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible");
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <script>
+        // Select the navigation bar
+        const nav = document.querySelector('nav');
+
+        // Add a scroll event listener
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function () {
+            // Get the current scroll position
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Check if the user is scrolling down
+            if (currentScroll > lastScrollTop) {
+                // If scrolling down, hide the nav
+                nav.classList.add('hidden');
+            } else if (currentScroll === 0) {
+                nav.classList.remove("hidden");
+            }
+
+
+            // Update the last scroll position
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+
+    </script>
+
+
+
+    <section id="home" class="home" class="page-section">
+        <div class="home-img">
+            <img src="resonance.logo.png" alt="RESONANCE Logo" style="height: 600px; width: 600px; opacity:85% ">
+        </div>
+        <div class="AboutUs">
+            <h1 data-key="about us h1">WELCOME TO OUR <br><span>WORLD!</span></h1>
+            <p class="englishText" data-key="englishText">
+                𝙒𝙚 𝙖𝙧𝙚 𝙍𝙀𝙎𝙊𝙉𝘼𝙉𝘾𝙀 - 𝙨𝙞𝙭 𝙥𝙖𝙨𝙨𝙞𝙤𝙣𝙖𝙩𝙚 𝙢𝙪𝙨𝙞𝙘𝙞𝙖𝙣𝙨 𝙗𝙡𝙚𝙣𝙙𝙞𝙣𝙜
+                𝙧𝙤𝙘𝙠, <br>𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙫𝙚, 𝙖𝙣𝙙 𝙛𝙪𝙨𝙞𝙤𝙣 𝙨𝙤𝙪𝙣𝙙𝙨.<br>𝘽𝙖𝙨𝙚𝙙 𝙞𝙣
+                𝙇𝙖𝙪𝙨𝙖𝙣𝙣𝙚, 𝙎𝙬𝙞𝙩𝙯𝙚𝙧𝙡𝙖𝙣𝙙, 𝙤𝙪𝙧 𝙢𝙪𝙨𝙞𝙘 𝙞𝙨 𝙙𝙧𝙞𝙫𝙚𝙣 𝙗𝙮 𝙧𝙖𝙬 𝙚𝙣𝙚𝙧𝙜𝙮,
+                <br>𝙙𝙚𝙚𝙥 𝙚𝙢𝙤𝙩𝙞𝙤𝙣, 𝙖𝙣𝙙 𝙘𝙤𝙣𝙣𝙚𝙘𝙩𝙞𝙤𝙣.<br><br>
+            </p>
+            <p class="frenchText">
+                𝙉𝙤𝙪𝙨 𝙨𝙤𝙢𝙢𝙚𝙨 𝙍𝙀𝙎𝙊𝙉𝘼𝙉𝘾𝙀 - 𝙨𝙞𝙭 𝙢𝙪𝙨𝙞𝙘𝙞𝙚𝙣𝙨 𝙥𝙖𝙨𝙨𝙞𝙤𝙣𝙣é𝙨
+                𝙚𝙭𝙥é𝙧𝙞𝙢𝙚𝙣𝙩𝙖𝙣𝙩 𝙖𝙫𝙚𝙘 𝙙𝙪 𝙧𝙤𝙘𝙠 𝙖𝙡𝙩𝙚𝙧𝙣𝙖𝙩𝙞𝙛 𝙚𝙩 𝙡𝙖 𝙛𝙪𝙨𝙞𝙤𝙣 𝙙𝙚
+                𝙨𝙩𝙮𝙡𝙚𝙨. 𝘽𝙖𝙨é à 𝙇𝙖𝙪𝙨𝙖𝙣𝙣𝙚, 𝙎𝙪𝙞𝙨𝙨𝙚, 𝙣𝙤𝙩𝙧𝙚 𝙢𝙪𝙨𝙞𝙦𝙪𝙚 𝙚𝙨𝙩 𝙙𝙞𝙧𝙞𝙜é𝙚
+                𝙥𝙖𝙧 𝙙𝙚𝙨 𝙛𝙤𝙧𝙩𝙚𝙨 é𝙢𝙤𝙩𝙞𝙤𝙣𝙨 𝙚𝙩 𝙪𝙣𝙚 𝙥𝙪𝙞𝙨𝙨𝙖𝙣𝙩𝙚 𝙘𝙤𝙣𝙣é𝙭𝙞𝙤𝙣.
+            </p>
+        </div>
+        <div class="social_icons">
+            <a href="https://instagram.com/resonancemusic_" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                    class="instagram-icon">
+            </a>
+            <a href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spotify.svg" alt="Spotify"
+                    class="spotify-icon" />
+            </a>
+            <a href="https://youtube.com/@resonance" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+                    class="youtube-icon" />
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section" class="page-section">
+        <h2 class="section-heading" data-key="sectionheading">About Us</h2>
+
+        <div class="slider-wrapper">
+            <button class="slider-btn left" onclick="scrollSlider(-1)">&#8592;</button>
+
+            <div class="slider" id="aboutSlider">
+                <div class="orb-container">
+                    <h3 class="orb-title" data-key="orbtitle">WhO ArE We</h3>
+                    <div class="orb">
+                        <img src="..." class="orb-img" alt="Early Days" />
+                    </div>
+                    <p class="orb-text" data-key="orbtext">We started as kids enjoying music in the streets of Lausanne.
+                    </p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title" data-key="orbtitle">First Gig</h3>
+                    <div class="orb">
+                        <img src="first gig.jpg" class="orb-img" alt="First Gig" />
+                    </div>
+                    <p class="orb-text" data-key="orbtext">We took the stage — and it felt like home. A packed evening
+                        to
+                        remember.</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title" data-key="orbtitle">Rehearsals</h3>
+                    <div class="orb">
+                        <img src="rehearsals.jpg" class="orb-img" alt="Rehearsals" />
+                    </div>
+                    <p class="orb-text" data-key="orbtext">Sweat, noise, laughs — this is where our sound grows
+                        everyday</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title" data-key="orbtitle">Street Concerts</h3>
+                    <div class="orb">
+                        <img src="street-con.jpg" class="orb-img" alt="Rehearsals" />
+                    </div>
+                    <p class="orb-text" data-key="orbtext">Getting paid differently</p>
+                </div>
+
+                <div id="orbModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                    <div id="caption"></div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const modal = document.getElementById("orbModal");
+                        const modalImg = document.getElementById("modalImg");
+                        const captionText = document.getElementById("caption");
+                        const closeBtn = document.querySelector(".close");
+                        const orbImgs = document.querySelectorAll(".orb-img");
+
+                        // Show modal on image click
+                        orbImgs.forEach(img => {
+                            img.addEventListener("click", () => {
+                                modal.style.display = "block";
+                                modalImg.src = img.src;
+                                captionText.textContent = img.alt || "";
+                            });
+                        });
+
+                        // Close modal when the X is clicked
+                        closeBtn.addEventListener("click", () => {
+                            modal.style.display = "none";
+                        });
+
+                        // Optional: Close modal when clicking outside the image
+                        modal.addEventListener("click", (e) => {
+                            if (e.target === modal) {
+                                modal.style.display = "none";
+                            }
+                        });
+                    });
+
+                </script>
+
+                <button class="slider-btn right" class="slider-btn">&#8594;</button>
+                <!-- Add more orb-containers here -->
+
+    </section>
+
+    <script>
+        function scrollSlider(direction) {
+            const slider = document.getElementById("aboutSlider");
+            const scrollAmount = 300;
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+    <div class="slider-wrapper">
+        <button class="slider-btn left">&#8592;</button>
+
+        <div class="slider">
+            <!-- your orb-containers -->
+        </div>
+
+        <button class="slider-btn right">&#8594;</button>
+    </div>
+    </div>
+
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const leftArrow = document.querySelector('.slider-btn.left');
+        const rightArrow = document.querySelector('.slider-btn.right');
+
+        let isScrolling;
+
+        slider.addEventListener('scroll', () => {
+            // When scroll starts, fade both arrows out
+            leftArrow.classList.add('fade-out');
+            rightArrow.classList.add('fade-out');
+
+            // Clear timeout if still scrolling
+            window.clearTimeout(isScrolling);
+
+            // Set a timeout to bring the arrows back
+            isScrolling = setTimeout(() => {
+                leftArrow.classList.remove('fade-out');
+                rightArrow.classList.remove('fade-out');
+            }, 600); // Adjust delay to how fast you want the arrows to return
+        });
+    </script>
+
+
+
+    <section id="meet-the-band" class="MeetTHEBand-section" class="page-section">
+
+        <h2 class="MeetTHEBand-section-heading" data-key="section-heading">Meet <span>THE</span> Band</h2>
+
+        <div class="slider-wrapper">
+            <button class="slider-btn left" onclick="scrollSlider(-1)">&#8592;</button>
+
+            <div class="slider" id="aboutSlider">
+                <div class="orb-container">
+                    <h3 class="orb-title">Antho</h3>
+                    <div class="orb">
+                        <img src="antho.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Drummer<br>...</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title">Jayant</h3>
+                    <div class="orb">
+                        <img src="jay 2.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Bassist, Guiratist <br>...</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title">Lawrence<br><span data-key="aka">"Igor for frenchies😁"</span></h3>
+                    <div class="orb">
+                        <img src="oim.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Pianist, Saxophonist<br>...</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title">Maïa</h3>
+                    <div class="orb">
+                        <img src="maïa.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Violinist, Singer<br>...</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title">Sam</h3>
+                    <div class="orb">
+                        <img src="sam.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Guitarist, Bassist<br>...</p>
+                </div>
+
+                <div class="orb-container">
+                    <h3 class="orb-title">Thibault</h3>
+                    <div class="orb">
+                        <img src="thibault.jpg" class="orb-img" alt="" />
+                    </div>
+                    <p class="orb-text" data-key="role">Singer, Keyboardist<br>...</p>
+
+                </div>
+
+                <div id="orbModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                    <div id="caption"></div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const modal = document.getElementById("orbModal");
+                        const modalImg = document.getElementById("modalImg");
+                        const captionText = document.getElementById("caption");
+                        const closeBtn = document.querySelector(".close");
+                        const orbImgs = document.querySelectorAll(".orb-img");
+
+                        // Show modal on image click
+                        orbImgs.forEach(img => {
+                            img.addEventListener("click", () => {
+                                modal.style.display = "block";
+                                modalImg.src = img.src;
+                                captionText.textContent = img.alt || "";
+                            });
+                        });
+
+                        // Close modal when the X is clicked
+                        closeBtn.addEventListener("click", () => {
+                            modal.style.display = "none";
+                        });
+
+                        // Optional: Close modal when clicking outside the image
+                        modal.addEventListener("click", (e) => {
+                            if (e.target === modal) {
+                                modal.style.display = "none";
+                            }
+                        });
+                    });
+
+                </script>
+
+                <button class="slider-btn right" class="slider-btn">&#8594;</button>
+                <!-- Add more orb-containers here -->
+
+    </section>
+
+    <script>
+        function scrollSlider(direction) {
+            const slider = document.getElementById("aboutSlider");
+            const scrollAmount = 300;
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+    <div class="slider-wrapper">
+        <button class="slider-btn left">&#8592;</button>
+
+        <div class="slider">
+            <!-- your orb-containers -->
+        </div>
+
+        <button class="slider-btn right">&#8594;</button>
+    </div>
+    </div>
+
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const leftArrow = document.querySelector('.slider-btn.left');
+        const rightArrow = document.querySelector('.slider-btn.right');
+
+        let isScrolling;
+
+        slider.addEventListener('scroll', () => {
+            // When scroll starts, fade both arrows out
+            leftArrow.classList.add('fade-out');
+            rightArrow.classList.add('fade-out');
+
+            // Clear timeout if still scrolling
+            window.clearTimeout(isScrolling);
+
+            // Set a timeout to bring the arrows back
+            isScrolling = setTimeout(() => {
+                leftArrow.classList.remove('fade-out');
+                rightArrow.classList.remove('fade-out');
+            }, 600); // Adjust delay to how fast you want the arrows to return
+        });
+    </script>
+
+
+
+
+    <section id="our-muzik">
+        <h2 class="section-heading" data-key="section-heading">Our Muzik</h2>
+
+        <div class="slider-wrapper">
+            <div class="slider" id="muzik-slider">
+                <!-- Track 1 -->
+                <div class="muzik-card">
+                    <h3 class="muzik-title">Tell Me Why</h3>
+                    <iframe src="https://open.spotify.com/embed/track/5yt4auDpuZPQIZDIRjAv04?utm_source=generator"
+                        width="100%" height="152" frameborder="0" allowtransparency="true"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/c29SgVBgDAo?si=smO1xM0axHNppSJk" width="100%"
+                        height="140" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="muzik-card">
+                    <h3 class="muzik-title">Above</h3>
+                    <iframe src="https://open.spotify.com/embed/track/4DkeKlTDIEnj1gcWze6UDx?utm_source=generator"
+                        width="100%" height="152" frameborder="0" allowtransparency="true"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/0vhiy1hklGY?si=-T3mNUzFqZosNYzK" width="100%"
+                        height="140" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="muzik-card">
+                    <h3 class="muzik-title">Another Day</h3>
+                    <iframe src="https://open.spotify.com/embed/track/5yFwlWsXY1YrOS0zFtqC6U?utm_source=generator"
+                        width="100%" height="152" frameborder="0" allowtransparency="true"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe src="https://www.youtube.com/embed/LCtq6clFAWg?si=Sc-o8YCNpdrQt9n4" width="100%"
+                        height="140" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!--Add more Tracks-->
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="concerts" class="concerts-section page-section">
+        <h2 class="section-heading" data-key="section-heading">Upcoming Concerts</h2>
+
+        <div class="concert-slider-wrapper">
+            <div class="concert-slider">
+                <!-- Example Concert Card -->
+                <div class="concert-card">
+                    <div class="concert-date" data-key="date">May 30, 2025</div>
+                    <div class="concert-location">📍 Bienne, CH</div>
+                    <div class="concert-venue">...</div>
+                    <a href="#" class="ticket-btn" data-key="tickets">Get Tickets</a>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-date" data-key="date">June 12, 2025</div>
+                    <div class="concert-location">📍 Lausanne, CH</div>
+                    <div class="concert-venue">Ô Vallon</div>
+                    <a href="#" class="ticket-btn" data-key="tickets">Get Tickets</a>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-date" data-key="date">June 15, 2025</div>
+                    <div class="concert-location">📍 Lausanne, CH</div>
+                    <div class="concert-venue">Bussigny</div>
+                    <a href="#" class="ticket-btn" tickets>Get Tickets</a>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-date" data-key="date">June 20, 2025</div>
+                    <div class="concert-location">📍 Lausanne, CH</div>
+                    <div class="concert-venue">SideWalk café</div>
+                    <a href="#" class="ticket-btn" data-key="tickets">Get Tickets</a>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-date" data-key="date">June 21, 2025</div>
+                    <div class="concert-location">📍 Lausanne, CH</div>
+                    <div class="concert-venue">Barberousse</div>
+                    <a href="#" class="ticket-btn" data-key="tickets">Get Tickets</a>
+                </div>
+
+                <!--<div class="concert-card">
+                    <div class="concert-date">..., 2025</div>
+                    <div class="concert-location">📍 ..., CH</div>
+                    <div class="concert-venue">...</div>
+                    <a href="#" class="ticket-btn" data-key="tickets">Get Tickets</a>
+                </div> -->
+
+                <!-- Add more cards here -->
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="HireUs" class=" hire-us section page-section">
+        <div class="hire-us-content">
+            <h2 data-key="section-heading">Hire Us</h2>
+            <p data-key="text">If you would like to work with us, get in touch!</p>
+            <p data-key="text">Email: <a href="mailto:info@resonance.com">📫resonancemusiccontact@gmail.com</a></p>
+            <p data-key="text">Phone: <a href="tel:+1234567890">☎️+41 000 000 00 00</a></p>
+            <footer>
+                <p data-key="text">&copy; Resonance 2025, All rights reserved</p>
+            </footer>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
