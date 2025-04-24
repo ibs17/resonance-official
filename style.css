@@ -153,6 +153,14 @@ nav a.active {
         }
     }
 
+    /* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
     nav.active {
         display: auto;
     }
