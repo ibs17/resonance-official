@@ -1,0 +1,2356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #072352;
+    color: white;
+
+}
+
+.page-section {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    background-color: rgb(13, 52, 83);
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rbga(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 600px 9%;
+}
+
+
+.logo:hover {
+    transform: scale(1.1);
+
+}
+
+nav a {
+    padding: 5px;
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 3rem;
+    font-weight: 500;
+    position: relative;
+    transition: opacity 0.5s ease-in-out 3px solid transparent;
+}
+
+
+
+
+nav a:after {
+    margin-top: 20px;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    right: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+    size: 2rem;
+    background-color: rgba(36, 139, 223, 0.747);
+    transform: scale(1);
+}
+
+@media(max-width: 1540px) {
+
+    .home {
+        background-color: #316cac;
+    }
+
+    .home h1.welcome {
+        padding-top: 14rem;
+        padding-left: 0px;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.3;
+        padding-bottom: 40px;
+    }
+
+    .home span {
+        font-size: 4rem;
+    }
+
+    .home p.englishText {
+        margin-left: 0px;
+        max-width: 450px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .home p.frenchText {
+        margin-left: 0px;
+        max-width: 450px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 1440px) {
+    .home h1.welcome {
+        padding-top: 14rem;
+        padding-left: 0px;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.3;
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 1390px) {
+    .home h1.welcome {
+        padding-top: 14rem;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.3;
+        padding-bottom: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .home-img img {
+        left: 10%;
+        position: relative;
+        width: 523px;
+        size: 500px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 25px solid rgb(59, 119, 187);
+        cursor: pointer;
+        transition: 0.2s linear;
+        margin-top: 80px;
+    }
+
+
+}
+
+@media(max-width:1200px) {
+    nav {
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        text-wrap: nowrap;
+    }
+
+    nav:hover {
+        transform: scale(1) 0.3s ease-in-out;
+    }
+
+
+    .home-img {
+        margin-right: 250px;
+        margin-left: 150px;
+        display: absolute;
+        left: 300px;
+    }
+
+    .home h1.welcome {
+        padding-left: 150px;
+        padding-top: 50px;
+        font-size: 5rem;
+        text-wrap: nowrap;
+    }
+
+    .home span {
+        font-size: 5rem;
+    }
+
+    .home p.englishText {
+        margin-left: 200px;
+        max-width: 450px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .home p.frenchText {
+        margin-left: 200px;
+        max-width: 450px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+
+    .social_icons {
+        padding-left: 130px;
+        margin-right: 0px;
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .instagram-icon {
+        margin-top: 10px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+}
+
+@media(max-width:970px) {
+
+    nav {
+        display: flex;
+        overflow-x: auto;
+    }
+
+
+    nav:hover {
+        transform: scale(1) 0.3s ease-in-out;
+    }
+
+    .home-img {
+        margin-right: 20px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+
+
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 4rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+    }
+
+    .home span {
+        font-size: 4rem;
+    }
+
+    .home p.englishText {
+        margin-right: 100px;
+        padding-right: 70px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+    }
+
+    .home p.frenchText {
+        text-wrap: wrap;
+        padding-right: 60px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+    }
+
+    .social_icons {
+        padding-left: 130px;
+        margin-right: 0px;
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .instagram-icon {
+        margin-top: 10px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .about-section .section-heading {
+        font-size: 2.5rem;
+        color: #4b9bd1;
+    }
+
+    .about-section .orb-container {
+        padding-left: 36px;
+        padding-right: 100px;
+        scroll-snap-align: center;
+        min-width: 260px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        height: 300px;
+    }
+
+    .MeetTHEBand-section .section-heading h2 {
+        font-size: 2rem;
+        display: flex;
+        text-wrap: nowrap;
+    }
+
+}
+
+@media(max-width:920px) {
+
+    section {
+        scroll-margin-top: 100px;
+    }
+
+    .page-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        pointer-events: none;
+        background-color: #072352;
+    }
+
+    .page-section-visible {
+        opacity: 0;
+        transform: translateY(0);
+        pointer-events: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        text-wrap: nowrap;
+    }
+
+
+    nav a {
+        display: flex;
+
+    }
+
+    nav:hover {
+        transform: scale(1) 0.3s ease-in-out;
+    }
+
+    .home-img {
+        margin-left: 6%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+
+
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 4rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+        padding-left: 70px;
+    }
+
+    .home span {
+        font-size: 4rem;
+    }
+
+    .home p.englishText {
+        margin-right: 100px;
+        padding-right: 70px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: 100px;
+    }
+
+    .home p.frenchText {
+        text-wrap: wrap;
+        padding-right: 60px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+        margin-left: 100px;
+    }
+
+    .social_icons {
+        padding-left: 100px;
+        margin-right: 0px;
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .instagram-icon {
+        margin-top: 10px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    #ourzik.section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 4rem;
+        margin-bottom: 70px;
+        font-family: 'Orbitron', sans-serif;
+        margin-left: 40px;
+    }
+
+    .slider .muzik-card {
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        align-items: center;
+        margin-left: 100px;
+    }
+
+    .hire-us-section {
+        padding-bottom: 100px;
+    }
+
+    .hire-us-content h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(59, 115, 178);
+        margin-bottom: 2rem;
+        font-family: "Orbitron", sans-serif;
+        margin-left: 30px !important;
+    }
+
+    .hire-us-content p {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        margin-left: 30px !important;
+    }
+
+
+
+
+}
+
+@media(max-width: 770px) {
+
+    .home h1.welcome {
+        margin-right: 100px;
+        padding-top: 0px;
+        font-size: 2.5rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+        padding-left: 150px;
+    }
+
+    .home span {
+        font-size: 2.5rem;
+    }
+
+    .home p.englishText {
+        overflow-x: auto;
+        margin-right: 150px;
+        padding-right: 84px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: 100px;
+
+    }
+
+    .home p.frenchText {
+        overflow-x: auto;
+        text-wrap: wrap;
+        padding-right: 60px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        margin-left: 68px;
+    }
+
+
+    .social_icons {
+        padding-left: 40px;
+        margin-right: 0px;
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .instagram-icon {
+        margin-top: 10px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+
+    #ourzik.section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 4rem;
+        margin-bottom: 60px;
+        font-family: 'Orbitron', sans-serif;
+        margin-left: 0px;
+    }
+
+    .slider .muzik-card {
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        align-items: center;
+        margin-left: 100px;
+    }
+
+    .hire-us-content h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(59, 115, 178);
+        margin-bottom: 2rem;
+        font-family: "Orbitron", sans-serif;
+        margin-left: 60px;
+    }
+
+    .hire-us-content p {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        margin-left: 60px;
+    }
+
+
+}
+
+@media(max-width: 650px) {
+
+    .home-img {
+        margin-right: 130px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        border-width: 0px;
+    }
+
+    .home h1.welcome {
+        margin-right: 100px;
+        padding-top: 0px;
+        font-size: 2.5rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+        padding-left: 75px;
+    }
+
+    .home span {
+        font-size: 2.5rem;
+    }
+
+    .home p.englishText {
+        overflow-x: auto;
+        margin-right: 150px;
+        padding-right: 84px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: 0px;
+
+    }
+
+    .home p.frenchText {
+        overflow-x: auto;
+        text-wrap: wrap;
+        padding-right: 60px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        margin-left: 0px;
+    }
+
+
+    .social_icons {
+        padding-left: 0px;
+        margin-right: 0px;
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+        padding-right: 100px;
+    }
+
+    .instagram-icon {
+        margin-top: 10px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading {
+        font-size: 3rem;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading span {
+        font-size: 3rem;
+    }
+
+    .ourzik .section-heading h2 {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 35px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+    }
+
+
+}
+
+@media(max-width:440px) {
+
+    .home-img {
+        left: 14%;
+        position: relative;
+        width: 500px;
+        size: 500px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 25px solid rgb(59, 119, 187);
+        cursor: pointer;
+        transition: 0.2s linear;
+        margin-top: 0px;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 2rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+        padding-left: 25px;
+    }
+
+    .home span {
+        font-size: 2rem;
+    }
+
+    .home p.englishText {
+        font-size: 1.6rem;
+        margin-right: 0px;
+        padding-right: 70px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: -88px;
+    }
+
+    .home p.frenchText {
+        font-size: 1.6rem;
+        text-wrap: wrap;
+        padding-right: 60px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+        margin-left: -98px;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 90px !important;
+    }
+
+
+    .instagram-icon {
+        margin-top: 10px;
+        margin: 0px 23px 0px 1px;
+        display: inline-block;
+
+    }
+
+    .youtube-icon {
+        margin-top: 10px;
+        margin: 0px 23px 0px 1px;
+        display: inline-block;
+    }
+
+    .spotify-icon {
+        margin-top: 10px;
+        margin: 0px 23px 0px 1px;
+        display: inline-block;
+    }
+
+
+    .slider-wrapper .orb-container {
+        padding-left: 60px;
+        padding-right: 110px;
+
+    }
+
+    .about-section .section-heading {
+        font-size: 3rem;
+        color: #4b9bd1;
+        margin-left: -228px;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading {
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+
+    #our-muzik-section .section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 42px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        margin-left: 42px;
+    }
+
+    .concerts-section .section-heading {
+        font-size: 3rem;
+        margin-bottom: 0px;
+        padding-bottom: -20px;
+        margin-left: 10px;
+    }
+
+
+    .concert-slider-wrapper {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        gap: 6rem;
+        padding: 60px 0;
+        padding-left: 0px !important;
+        padding-bottom: 0%;
+        padding-top: 95px !important;
+    }
+
+    .media-section .section-heading {
+        color: rgb(66, 134, 185);
+        font-weight: 600;
+        position: absolute;
+        margin-left: 35px !important;
+        font-size: 3rem !important;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .media-section {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 47px 22px !important;
+        padding-bottom: 10px;
+        padding-right: 84px !important;
+    }
+
+
+    .hire-us-section {
+        padding-bottom: 100px;
+    }
+
+    .hire-us-content h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(59, 115, 178);
+        margin-bottom: 2rem;
+        font-family: "Orbitron", sans-serif;
+        margin-left: 10px !important;
+    }
+
+    .hire-us-content p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 10px !important;
+    }
+}
+
+@media(max-width:415px) {
+    nav a {
+        padding: 5px;
+        font-size: 1.8rem;
+        color: white;
+        margin-left: 2rem;
+        font-weight: 500;
+        position: relative;
+        transition: opacity 0.5s ease-in-out 3px solid transparent;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 2rem;
+        text-wrap: nowrap;
+        padding-bottom: 30px;
+        padding-left: 14px;
+    }
+
+    .home p.englishText {
+        font-size: 1.6rem;
+        margin-right: 0px;
+        padding-right: 70px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: -98px;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 82px !important;
+    }
+
+    .about-section .section-heading {
+        font-size: 2.5rem;
+        color: #4b9bd1;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading {
+        font-size: 2.5rem;
+    }
+
+    .MeetTHEBand-section h2 span {
+        font-family: sans-serif;
+        font-size: 2.5rem !important;
+        font-weight: 600;
+        color: rgb(59, 118, 186);
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    #our-muzik-section .section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 2.5rem !important;
+        margin-bottom: 25px !important;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        margin-left: 42px;
+    }
+
+    .concerts-section {
+        padding-top: 10px;
+        background-color: #000;
+        color: rgb(255, 255, 255);
+        padding: 49px 40px !important;
+        text-align: center;
+    }
+
+    .concerts-section .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 0px;
+        padding-bottom: -20px;
+        margin-left: 10px;
+    }
+
+    .media-section .section-heading {
+        color: rgb(66, 134, 185);
+        font-weight: 600;
+        position: absolute;
+        margin-left: 32px !important;
+        font-size: 2.5rem !important;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .media-section {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 47px 22px !important;
+        padding-bottom: 10px;
+        padding-right: 84px !important;
+    }
+
+    .hire-us-section {
+        padding-top: 30px;
+        background-color: black;
+        color: white;
+        padding: 4rem 9%;
+        text-align: center;
+        padding-bottom: 59px !important;
+    }
+
+    .hire-us-content p {
+        margin-left: -30px;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+
+
+
+
+
+
+
+}
+
+@media(max-width:393px) {
+
+    nav {
+        display: flex;
+        gap: 0rem !important;
+        font-size: 0.8rem !important;
+        text-wrap: nowrap;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 1.5rem;
+        color: white;
+        margin-left: 1rem;
+        font-weight: 500;
+        position: relative;
+        transition: opacity 0.5s ease-in-out 3px solid transparent;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 2rem;
+        text-wrap: nowrap;
+        padding-bottom: 56px;
+        padding-left: 0px !important;
+    }
+
+    .home span {
+        font-size: 2rem;
+    }
+
+    .home p.englishText {
+        margin-right: 0px;
+        padding-right: 80px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: -84px !important;
+        font-size: 1.5rem;
+    }
+
+    .home p.frenchText {
+        text-wrap: wrap;
+        padding-right: 120px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+        margin-left: -46px;
+        font-size: 1.5rem;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 67px !important;
+    }
+
+    .about-section .section-heading {
+        font-size: 2.5rem;
+        color: #4b9bd1;
+        margin-left: -174px;
+    }
+
+    .slider-wrapper .orb-container {
+        padding-left: 37px;
+        padding-right: 92px;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading {
+        font-size: 2.5rem;
+        margin-left: 31px;
+    }
+
+    #our-muzik-section .section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: -3px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        margin-left: 52px;
+    }
+
+    .concerts-section .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-left: 7px;
+    }
+
+    .media-section {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 34px 13px !important;
+        padding-bottom: 10px;
+        padding-right: 66px !important;
+    }
+
+    .hire-us-content p {
+        margin-left: -30px;
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .hire-us-section {
+        padding-top: 30px;
+        background-color: black;
+        color: white;
+        padding: 4rem 9%;
+        text-align: center;
+        padding-bottom: 47px !important;
+    }
+
+}
+
+@media(max-width:376px) {
+    nav a {
+        padding: 5px;
+        font-size: 1.6rem;
+        color: white;
+        margin-left: 2rem !important;
+        font-weight: 500;
+        position: relative;
+        transition: opacity 0.5s ease-in-out 3px solid transparent;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 2rem;
+        text-wrap: nowrap;
+        padding-bottom: 56px;
+        padding-left: 0px !important;
+    }
+
+    .home p.englishText {
+        margin-right: 0px;
+        padding-right: 80px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: -108px !important;
+        font-size: 1.5rem;
+    }
+
+    .home p.frenchText {
+        text-wrap: wrap;
+        padding-right: 120px;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+        margin-left: -67px;
+        font-size: 1.5rem;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 60px !important;
+    }
+
+    .hire-us-content h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(59, 115, 178);
+        margin-bottom: 2rem;
+        font-family: "Orbitron", sans-serif;
+        margin-left: 7px !important;
+    }
+
+    .hire-us-content p {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        margin-left: 9px !important;
+    }
+
+
+}
+
+@media(max-width:360px) {
+    .home-img img {
+        left: 29% !important;
+        position: relative;
+        width: 527px;
+        size: 539px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 25px solid rgb(59, 119, 187);
+        cursor: pointer;
+        transition: 0.2s linear;
+        margin-top: 80px;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 1.8rem !important;
+        text-wrap: nowrap;
+        padding-bottom: 56px;
+        padding-left: -9px !important;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 50px !important;
+    }
+
+    .slider-wrapper .orb-container {
+        padding-left: 19px;
+        padding-right: 75px;
+    }
+
+}
+
+@media(max-width:320px) {
+    nav a {
+        padding: 5px;
+        font-size: 1.3rem !important;
+        color: white;
+        margin-left: 1.6rem !important;
+        font-weight: 500;
+        position: relative;
+        transition: opacity 0.5s ease-in-out 3px solid transparent;
+    }
+
+    .home-img img {
+        left: 61% !important;
+        position: relative;
+        width: 527px;
+        size: 539px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 25px solid rgb(59, 119, 187);
+        cursor: pointer;
+        transition: 0.2s linear;
+        margin-top: 80px;
+    }
+
+    .home h1.welcome {
+        padding-top: 0px;
+        font-size: 1.5rem !important;
+        text-wrap: nowrap;
+        padding-bottom: 56px;
+        padding-left: -9px !important;
+    }
+
+    .home p.englishText {
+        margin-right: 5px;
+        padding-right: 84px;
+        max-width: 500px;
+        padding-bottom: 10px;
+        text-wrap: wrap;
+        margin-left: -104px !important;
+        font-size: 1.5rem;
+    }
+
+    .home p.frenchText {
+        text-wrap: wrap;
+        padding-right: 78px !important;
+        max-width: 500px;
+        padding-bottom: 5px;
+        display: relative;
+        margin-left: -117px !important;
+        font-size: 1.5rem;
+    }
+
+    .social_icons {
+        align-items: center;
+        display: inline-flex;
+        gap: 3rem !important;
+        margin-right: 300px;
+        left: 50%;
+        margin-left: 29px !important;
+    }
+
+    .about-section .section-heading {
+        font-size: 2.5rem;
+        color: #4b9bd1;
+        margin-left: -137px !important;
+    }
+
+    .slider-wrapper .orb-container {
+        padding-left: 0px !important;
+        padding-right: 56px !important;
+    }
+
+    .MeetTHEBand-section .MeetTHEBand-section-heading {
+        font-size: 2.5rem;
+        margin-left: 10px !important;
+    }
+
+    #our-muzik-section .section-heading {
+        color: rgb(61, 115, 177);
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: -3px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        margin-left: 31px !important;
+    }
+
+    .muzik-card {
+        scroll-snap-align: center;
+        min-width: 197px;
+        height: auto;
+        flex-shrink: 0;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 2rem;
+        padding: 0.09rem !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        gap: 2rem;
+        margin-left: 50px !important;
+        margin-right: 100px;
+    }
+
+    .concerts-section .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-left: -18px !important;
+    }
+
+    .concert-slider-wrapper {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        gap: 6rem;
+        padding: 60px 0;
+        padding-left: 0px;
+        padding-bottom: 0%;
+        padding-top: 150px;
+    }
+
+    .media-section {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 50px 20px;
+        padding-bottom: 10px;
+        margin-left: -25px;
+        margin-right: -10px;
+    }
+
+    .hire-us-content h2 {
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(59, 115, 178);
+        margin-bottom: 2rem;
+        font-family: "Orbitron", sans-serif;
+        margin-left: -3px !important;
+    }
+
+    .hire-us-content p {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        margin-left: -3px !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    padding: 60px;
+    flex-wrap: wrap;
+    background-color: #072352;
+    padding-bottom: 150px;
+
+
+}
+
+.home h1 {
+    padding-top: 10rem;
+    padding-left: 40px;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-bottom: 40px;
+    padding-right: 125px;
+}
+
+.home p {
+    padding-left: 70px;
+    max-width: 500px;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+.home.frenchText {
+    padding-left: 103px;
+    max-width: 500px;
+    font-size: 2rem;
+    padding-bottom: 0;
+}
+
+span {
+    color: rgb(103, 154, 210);
+    font-size: 4rem;
+}
+
+.home-img img {
+    left: 10%;
+    position: relative;
+    width: 500px;
+    size: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(59, 119, 187);
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin-top: 80px;
+
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social_icons {
+    margin-right: 300px;
+    left: 50%;
+    margin-left: 185px;
+}
+
+
+.instagram-icon {
+    position: relative;
+    width: 50px;
+    height: 40%;
+    filter: invert(48%) sepia(94%) saturate(745%) hue-rotate(318deg) brightness(93%) contrast(92%);
+    transition: 0.3s linear;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+.spotify-icon {
+    width: 50px;
+    height: 40%;
+    filter: invert(35%) sepia(98%) saturate(748%) hue-rotate(85deg) brightness(91%) contrast(85%);
+    transition: 0.3s linear;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.spotify-icon:hover {
+    transform: scale(1.1);
+}
+
+.youtube-icon {
+    width: 50px;
+    height: 40%;
+    filter: invert(20%) sepia(100%) saturate(7488%) hue-rotate(358deg) brightness(93%) contrast(106%);
+    transition: 0.3s linear;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+
+}
+
+.youtube-icon:hover {
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.page-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.page-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.about-section {
+    padding: 60px 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0;
+
+    background-image: url('images/reslogo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-resolution: 0;
+
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjust opacity here */
+    z-index: 0;
+    /* Makes sure it's below the content */
+}
+
+.about-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section h2 {
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.section-heading {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.slider-wrapper {
+    position: absolute;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slider {
+    display: none;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.orb-container {
+    padding-left: 121px;
+    scroll-snap-align: center;
+    min-width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 300px;
+
+}
+
+.orb-title {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    padding-left: 48px;
+}
+
+.orb {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.07);
+}
+
+.orb-img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.orb-img:hover {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Close button */
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.orb-text {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 40px;
+    color: white;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 37%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: rgb(38, 91, 165);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn.left {
+    left: 4%;
+}
+
+.slider-btn.right {
+    opacity: 1;
+    right: 4%;
+}
+
+.slider-btn.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.MeetTHEBand-section {
+    padding: 60px 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    background-color: black;
+
+}
+
+.about-section {
+    padding: 60px 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    background-image: url('images/reslogo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-resolution: 0;
+
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjust opacity here */
+    z-index: 0;
+    /* Makes sure it's below the content */
+}
+
+.about-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.section-heading {
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.orb-container {
+    padding-left: 121px;
+    scroll-snap-align: center;
+    min-width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 300px;
+
+}
+
+.orb-title {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    padding-left: 48px;
+}
+
+.orb {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.07);
+}
+
+.orb-img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.orb-img:hover {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Close button */
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.orb-text {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 40px;
+    color: white;
+}
+
+.slider-btn {
+
+    display: none;
+    position: absolute;
+    top: 37%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: rgb(34, 91, 151);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn.left {
+
+    left: 4%;
+}
+
+.slider-btn.right {
+    opacity: 1;
+    right: 4%;
+}
+
+.slider-btn.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.MeetTHEBand-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 0%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-resolution: 7%;
+
+
+}
+
+.MeetTHEBand-section h2 {
+    margin-left: 65px;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(59, 117, 172);
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.MeetTHEBand-section h2 span {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(59, 118, 186);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.MeetTHEBand-section .orb-title {
+    font-size: 2.5rem;
+}
+
+.MeetTHEBand-section .orb-text {
+    font-size: 2rem;
+}
+
+.MeetTHEBand-section span {
+    font-size: 1.8rem;
+    color: white;
+    font-family: cursive;
+}
+
+
+.page-section {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    background-color: #072352;
+}
+
+.our-muzik-section {
+    padding-top: 30px;
+    margin-top: 0px;
+    background-color: black;
+    padding-bottom: 5px;
+}
+
+.our-muzik-section h2 {
+    position: relative;
+    font-weight: 800;
+    font-size: 40px;
+    background: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+
+
+}
+
+.muzik-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-left: 60px;
+}
+
+/* Muzik Slider - Horizontal Scroll like About section */
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.slider {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.muzik-card {
+    scroll-snap-align: center;
+    min-width: 300px;
+    height: auto;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    gap: 2rem;
+    margin-left: 90px;
+    margin-right: 100px;
+
+}
+
+.muzik-card:hover {
+    transform: scale(1.05);
+}
+
+.muzik-title {
+    font-size: 2rem;
+    color: rgb(62, 107, 159);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.muzik-card iframe {
+    border-radius: 12px;
+    width: 90%;
+}
+
+#our-muzik-section h2 {
+    color: rgb(61, 115, 177);
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 60px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+    margin-left: 90px;
+}
+
+.concerts-section {
+    padding-top: 10px;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.concerts-section h2 {
+    color: rgb(66, 134, 185);
+    font-size: 4rem;
+    font-weight: 600;
+    position: absolute;
+    margin-bottom: 60px;
+    margin-left: 55px;
+
+}
+
+.concert-slider-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 6rem;
+    padding: 60px 0;
+    padding-left: 30px;
+    padding-bottom: 0%;
+    padding-top: 150px;
+}
+
+.concert-slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    display: flex;
+    gap: 2rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.concerts-slider::-webkit-scrollbar {
+    color: black;
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.concert-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background: #111;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 0;
+
+}
+
+.concert-card:hover {
+    transform: scale(1.05);
+}
+
+.concert-date {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #4083bd;
+}
+
+.concert-location,
+.concert-venue {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.address-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: rgb(63, 126, 194);
+    color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.address-btn:hover {
+    background-color: #316cac;
+}
+
+/* Style the media section */
+.media-section {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px 20px;
+    padding-bottom: 10px;
+}
+
+.section-heading {
+    color: rgb(66, 134, 185);
+    font-weight: 600;
+    position: relative;
+    margin-left: 85px;
+    font-size: 4rem;
+    margin-bottom: 50px;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.media-slider-wrapper {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
+.media-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+}
+
+
+.media-slide {
+    flex: 0 0 auto;
+    width: 250px;
+    background: #111;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 0;
+}
+
+
+
+.media-image,
+.media-video {
+    flex: 0 0 auto;
+    width: 250px;
+    background: #111;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 0;
+}
+
+
+.media-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    display: none;
+    left: 0;
+}
+
+.next {
+    display: none;
+    right: 0;
+}
+
+.media-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal overlay */
+.media-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal content box */
+.media-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    text-align: center;
+}
+
+/* Close button */
+.media-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.media-close:hover {
+    color: #ccc;
+}
+
+/* Image or video inside modal */
+.media-modal-content img,
+.media-modal-content video {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+
+
+
+.hire-us-section {
+    padding-top: 30px;
+    background-color: black;
+    color: white;
+    padding: 4rem 9%;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.hire-us-content h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(59, 115, 178);
+    margin-bottom: 2rem;
+    font-family: "Orbitron", sans-serif;
+    text-align: left;
+    margin-left: -30px;
+}
+
+.hire-us-content p {
+    margin-left: -30px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.hire-us-section a {
+    color: rgb(61, 119, 186);
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.hire-us-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #d3d3d3;
+}
+
+.language-switcher {
+    display: none;
+}
